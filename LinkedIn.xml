@@ -230,7 +230,31 @@
 						values.Add("urn:li:industry:142", "Wine and Spirits");
 						values.Add("urn:li:industry:119", "Wireless");
 						values.Add("urn:li:industry:103", "Writing and Editing");
-
+						values.Add("urn:li:industry:406", "Building Construction");
+						values.Add("urn:li:industry:1810", "Professional Services");
+						values.Add("urn:li:industry:3242", "Engineering Services");
+						values.Add("urn:li:industry:1770", "Real Estate Agents and Brokers");
+						values.Add("urn:li:industry:413", "Nonresidential Building Construction");
+						values.Add("urn:li:industry:2374", "Community Development and Urban Planning");
+						values.Add("urn:li:industry:1750", "Trusts and Estates");
+						values.Add("urn:li:industry:404", "Steam and Air-Conditioning Supply");
+						values.Add("urn:li:industry:1965", "Janitorial Services");
+						values.Add("urn:li:industry:3243", "Services for Renewable Energy");
+						values.Add("urn:li:industry:3126", "Interior Design");
+						values.Add("urn:li:industry:1080", "Household and Institutional Furniture Manufacturing");
+						values.Add("urn:li:industry:453", "Building Equipment Contractors");
+						values.Add("urn:li:industry:1999", "Education");
+						values.Add("urn:li:industry:3241", "Renewable Energy Equipment Manufacturing");
+						values.Add("urn:li:industry:2194", "Hotels and Motels");
+						values.Add("urn:li:industry:431", "Highway, Street, and Bridge Construction");
+						values.Add("urn:li:industry:1862", "Marketing Services");
+						values.Add("urn:li:industry:2468", "Electrical Equipment Manufacturing");
+						values.Add("urn:li:industry:3240", "Renewable Energy Power Generation");
+						values.Add("urn:li:industry:387", "Solar Electric Power Generation");
+						values.Add("urn:li:industry:1187", "Wholesale Machinery");
+						values.Add("urn:li:industry:2369", "Housing and Community Development");
+						values.Add("urn:li:industry:408", "Residential Building Construction");
+					
 						string output = (values.TryGetValue(Model.Inp, out value) ? value : "");
 					}
 					@output
@@ -480,6 +504,7 @@
 				<Resource Id="DictFunctions"/>
         <JsonPath Expr="followerCounts.organicFollowerCount" Id="Organic" Title="Organic" Converter="Auto"/>
         <JsonPath Expr="followerCounts.paidFollowerCount" Id="Paid" Title="Paid" Converter="Auto"/>
+        <JsonPath Expr="function" Id="Code" Title="Code" Converter="Auto"/>
 			</JsonPath>
     </Parse>
 		<Resource Id="Fail"/>
@@ -503,6 +528,7 @@
 				<Resource Id="DictIndustries"/>
         <JsonPath Expr="followerCounts.organicFollowerCount" Id="Organic" Title="Organic" Converter="Auto"/>
         <JsonPath Expr="followerCounts.paidFollowerCount" Id="Paid" Title="Paid" Converter="Auto"/>
+        <JsonPath Expr="industry" Id="Code" Title="Code" Converter="Auto"/>
 			</JsonPath>
     </Parse>
 		<Resource Id="Fail"/>

@@ -172,6 +172,7 @@
 				<JsonPath Expr="from.insights.data[?(@@.name=='page_follows' &amp;&amp; @@.period=='day')].values[0].value" Id="AuthorFollows" Tag="from{name,name_with_location_descriptor,fan_count,insights.metric(page_follows)}" Title="Author Followers" Converter="Int" DefaultValue="0"/>
         <JsonPath Expr="$.full_picture" Id="PictureUrl" Title="Picture" Converter="String" Tag="full_picture" DefaultValue=""/>
         <JsonPath Expr="$.picture" Id="ThumbnailUrl" Title="Thumbnail" Converter="String" Tag="picture" DefaultValue=""/>
+        <JsonPath Expr="promotion_status" Id="PromotionStatus" Tag="promotion_status" Title="Promotion Status" Converter="String"/>
 				<JsonPath Expr="insights.data[?(@@.name=='post_media_view' &amp;&amp; @@.period=='lifetime')].values[0].value" Id="pmv" Tag="post_media_view" Title="Views" Converter="Int" DefaultValue="0" HelpText=""/>
 				<JsonPath Expr="likes.summary.total_count" Id="Likes" Tag="likes.limit(0).summary(true)" Title="Likes" Converter="Int" DefaultValue="0"/>
         <JsonPath Expr="reactions_love.summary.total_count" Id="Love" Converter="Int" Tag="reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love)" DefaultValue=""/>
@@ -251,7 +252,7 @@
 				return new string[] {
 					"permalink_url","id","created_time","message","from",
 					"from{name,name_with_location_descriptor,fan_count,insights.metric(page_follows)}",
-					"attachments","full_picture","picture","shares",
+					"attachments","full_picture","picture","promotion_status","shares",
 					"comments.filter(stream).limit(0).summary(true)",
 					"likes.limit(0).summary(true)",
 					"reactions.limit(0).summary(true)",
